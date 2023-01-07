@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Html forms</title>
+  </head>
+  <body>
+    <form action="results.html" method="get" enctype="multipart/form-data"> <!--enctype is added because we need to upload a file-->
+      <div>
+        <label for="name">Name</label>
+        <!--when we click a label it should highlight the relevant field, for that we use the'for' attribute and id'-->
+        <input name="name" id="name" placeholder="Eg: John" required />
+        <!--required attribute will validate as to whether the user submits empty values-->
+      </div>
+      <div>
+        <label for="pw">Password</label>
+        <input
+          type="password"
+          name="password"
+          id="pw"
+          placeholder="Eg: john213"
+          required
+        />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" required />
+      </div>
+
+      <div>
+        <label for="phone">Phone</label>
+        <input type="tel" name="phone" id="phone" required />
+      </div>
+      <div>
+        <label for="age">Age</label>
+        <input type="number" name="age" id="age" min="18" max="200" />
+        <!--min and max allows to set the minimum and maximum number value-->
+      </div>
+
+      <div>
+        <label for="birthdate">Birthdate</label>
+        <input
+          type="date"
+          name="date"
+          id="date"
+          min="1960-12-31"
+          max="2002-12-31"
+        />
+      </div>
+
+      <div>
+        Gender :
+        <div>
+          <label for="male">Male</label>
+          <input type="radio" name="gender" id="male" value="male"/> <!--A value attribute must be set, so that you know what is selected-->
+        </div>
+        <div>
+          <label for="female">Female</label>
+          <input type="radio" name="gender" id="female" value="female"/>
+        </div>
+      </div>
+
+      <div>
+        <label for="country">Country :</label>
+        <select name="country" id="country">
+          <option value="srilanka">Sri Lanka</option>
+          <option value="japan">Japan</option>
+          <option value="china">China</option>
+        </select>
+      </div>
+
+      <div>
+        Programming languages interested in :
+        <div>
+          <label for="html">HTML</label>
+          <input type="checkbox" name="html" id="html" />
+        </div>
+
+        <div>
+          <label for="css">CSS</label>
+          <input type="checkbox" name="css" id="css" />
+        </div>
+        <div>
+          <label for="js">JS</label>
+          <input type="checkbox" name="js" id="js" />
+        </div>
+        <div>
+          <label for="php">PHP</label>
+          <input type="checkbox" name="php" id="php" />
+        </div>
+      </div>
+
+      <div>
+        <label for="cv">Curriculum Vitae</label>
+        <input type="file" name="cv" id="cv">
+      </div>
+      <div>
+        <label for="notes">Special note</label>
+        <textarea name="notes" id="notes"></textarea>
+      </div>
+     
+      <div>
+        <button type="reset">Reset</button>
+        <button type="submit">Submit</button>
+      </div>
+    </form>
+  </body>
+</html>
